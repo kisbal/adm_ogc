@@ -1,20 +1,36 @@
 import React from "react";
+import logo from "../../assets/images/logo/DH.png"
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+  const navigate = useNavigate();
+  
+  function handleClick() {
+    navigate("/home")
+  }
+
   return (
     <>
       <div id="auth">
         <div className="row h-100">
           <div className="col-lg-5 col-12">
             <div id="auth-left">
+              <img src=""></img>
+            </div>
+          </div>
+          <div className="col-lg-7 d-none d-lg-block">
+            <div id="auth-right">
               <div className="auth-logo">
                 <a href="index.html">
-                  <img src="assets/images/logo/logo.png" alt="Logo" />
+                  <img src={logo} alt="Logo" />
                 </a>
               </div>
-              <h1 className="auth-title">Log in.</h1>
-              <p className="auth-subtitle mb-5">
+              <h1 className="auth-title">OGC PLM DATA COLLECTOR</h1>
+              {/* <p className="auth-subtitle mb-5">
                 Log in with your data that you entered during registration.
+              </p> */}
+              <p>
+                <h4>Sign In Admin</h4>
               </p>
 
               <form action="index.html">
@@ -49,32 +65,14 @@ function LoginPage() {
                     className="form-check-label text-gray-600"
                     for="flexCheckDefault"
                   >
-                    Keep me logged in
+                    Remember me
                   </label>
                 </div>
-                <button className="btn btn-primary btn-block btn-lg shadow-lg mt-5">
+                <button className="btn btn-primary btn-block btn-lg shadow-lg mt-5" onClick={handleClick}>
                   Log in
                 </button>
               </form>
-              <div className="text-center mt-5 text-lg fs-4">
-                <p className="text-gray-600">
-                  Don't have an account?{" "}
-                  <a href="auth-register.html" className="font-bold">
-                    Sign up
-                  </a>
-                  .
-                </p>
-                <p>
-                  <a className="font-bold" href="auth-forgot-password.html">
-                    Forgot password?
-                  </a>
-                  .
-                </p>
-              </div>
             </div>
-          </div>
-          <div className="col-lg-7 d-none d-lg-block">
-            <div id="auth-right">login</div>
           </div>
         </div>
       </div>

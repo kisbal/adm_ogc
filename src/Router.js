@@ -12,9 +12,8 @@ function Routing() {
     <>
     <Router>
         <Routes>
-
-            <Route path='/' element={<Homepage/>}></Route>
-            {/* <Route path='/' element={<LoginPage/>}></Route> */}
+            <Route path='/home' element={<Homepage/>}></Route>
+            <Route path='/login' element={<LoginPage/>}></Route>
             <Route path='/view-unit' element={<ViewDetail/>}></Route>
             <Route path='/view-transaksi' element={<ViewTransaksi/>}></Route>
         </Routes>
